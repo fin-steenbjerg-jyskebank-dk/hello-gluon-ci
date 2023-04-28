@@ -37,9 +37,9 @@ jobs:
           ./mvnw -Pdesktop,mac gluonfx:build gluonfx:package
           echo ::set-output name=path::target/gluonfx/x86_64-darwin/HelloGluon-1.0.0.pkg
 
-      - name: See build output folders
+      - name: See target output folders
         run: ls -l target/gluonfx
-      - name: See build output folders for architecture
+      - name: See target output folders for architecture
         run: ls -l target/gluonfx/x86_64-darwin
       - name: Copy native client to staging
         run: cp -r target/gluonfx/x86_64-darwin/HelloGluon* staging
